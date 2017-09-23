@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KhettafRest2/KhettafRest2.iml" filepath="$PROJECT_DIR$/KhettafRest2/KhettafRest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KhettafWS.iml" filepath="$PROJECT_DIR$/KhettafWS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/khettafModel/khettafModel.iml" filepath="$PROJECT_DIR$/khettafModel/khettafModel.iml" />
+    </modules>
+  </component>
+</project>
