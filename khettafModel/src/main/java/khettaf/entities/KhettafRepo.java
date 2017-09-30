@@ -1,6 +1,5 @@
-package khettaf;
+package khettaf.entities;
 
-import khettaf.Khettaf;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,6 +1,5 @@
-package khettaf;
+package khettaf.entities;
 
-import khettaf.POI;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

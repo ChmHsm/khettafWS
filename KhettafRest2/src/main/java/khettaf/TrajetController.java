@@ -1,5 +1,7 @@
 package khettaf;
 
+import khettaf.entities.KhettafRepo;
+import khettaf.entities.TrajetRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

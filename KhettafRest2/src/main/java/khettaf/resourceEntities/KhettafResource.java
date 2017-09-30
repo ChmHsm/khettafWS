@@ -1,6 +1,6 @@
 package khettaf.resourceEntities;
 
-import khettaf.Khettaf;
+import khettaf.entities.Khettaf;
 import org.springframework.hateoas.ResourceSupport;
 
 /**

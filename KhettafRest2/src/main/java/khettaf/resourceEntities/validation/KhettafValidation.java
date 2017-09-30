@@ -1,7 +1,7 @@
 package khettaf.resourceEntities.validation;
 
 import khettaf.exceptions.KhettafNotFoundException;
-import khettaf.KhettafRepo;
+import khettaf.entities.KhettafRepo;
 
 import java.security.Principal;
 

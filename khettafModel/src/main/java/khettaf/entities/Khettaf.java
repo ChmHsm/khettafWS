@@ -1,4 +1,4 @@
-package khettaf;
+package khettaf.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

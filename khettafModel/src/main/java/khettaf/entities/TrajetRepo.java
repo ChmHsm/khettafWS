@@ -1,6 +1,5 @@
-package khettaf;
+package khettaf.entities;
 
-import khettaf.Trajet;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
