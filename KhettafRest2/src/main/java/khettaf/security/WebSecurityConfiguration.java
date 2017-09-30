@@ -29,7 +29,7 @@ public class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdap
     @Bean
     UserDetailsService userDetailsService() {
         return (username) -> khettafRepo
-                .findByUtilisateurIgnoreCase(username)
+                .findByUsernameIgnoreCase(username)
                 .map(a -> new User(a.getUsername(), a.getPassword(), true, true, true, true,
                         AuthorityUtils.createAuthorityList("ROLE_USER", "write")))
                 .orElseThrow(

@@ -19,7 +19,7 @@ public class KhettafValidation {
     public void validateKhettaf(Principal principal) {
         String name = principal.getName();
         this.khettafRepo
-                .findByUtilisateurIgnoreCase(name)
+                .findByUsernameIgnoreCase(name)
                 .orElseThrow(
                         () -> new KhettafNotFoundException(name));
     }
