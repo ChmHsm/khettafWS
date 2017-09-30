@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * Created by Me on 22/09/2017.
@@ -69,14 +70,18 @@ public class Application extends SpringBootServletInitializer {
         POI poi2 = poiRepo.save(new POI(0.0, 0.0, "Rabat"));
         POI poi3 = poiRepo.save(new POI(0.0, 0.0, "Marrakech"));
         POI poi4 = poiRepo.save(new POI(0.0, 0.0, "Fès"));
+        Date dateDepart = new Date();
+        String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                "Morbi eleifend imperdiet enim vel pharetra. Donec molestie finibus felis " +
+                "vitae efficitur. Nunc et erat vitae sapien molestie bibendum.";
 
         return (event) -> Arrays.asList("Houssam,Boualam,Meryam".split(","))
                 .forEach(
                         khettaf -> {
                             Khettaf khettaf1 = khettafRepo.save(new Khettaf(khettaf, "password"));
 
-                            Trajet trajet1 = trajetRepo.save(new Trajet(khettaf1, poi1, poi2));
-                            Trajet trajet2 = trajetRepo.save(new Trajet(khettaf1, poi3, poi4));
+                            Trajet trajet1 = trajetRepo.save(new Trajet(khettaf1, poi1, poi2, description, dateDepart));
+                            Trajet trajet2 = trajetRepo.save(new Trajet(khettaf1, poi3, poi4, description, dateDepart));
                         }
                 );
     }
