@@ -64,14 +64,16 @@ public class Application extends SpringBootServletInitializer {
     @Bean
     CommandLineRunner init(final KhettafRepo khettafRepo, final POIRepo poiRepo, final TrajetRepo trajetRepo){
 
+        POI poi1 = poiRepo.save(new POI(0.0, 0.0, "Casablanca"));
+        POI poi2 = poiRepo.save(new POI(0.0, 0.0, "Rabat"));
+        POI poi3 = poiRepo.save(new POI(0.0, 0.0, "Marrakech"));
+        POI poi4 = poiRepo.save(new POI(0.0, 0.0, "Fès"));
+
         return (event) -> Arrays.asList("Houssam,Boualam,Meryam".split(","))
                 .forEach(
                         khettaf -> {
                             Khettaf khettaf1 = khettafRepo.save(new Khettaf(khettaf, "password"));
-                            POI poi1 = poiRepo.save(new POI(0.0, 0.0, "Casablanca"));
-                            POI poi2 = poiRepo.save(new POI(0.0, 0.0, "Rabat"));
-                            POI poi3 = poiRepo.save(new POI(0.0, 0.0, "Marrakech"));
-                            POI poi4 = poiRepo.save(new POI(0.0, 0.0, "Fès"));
+
                             Trajet trajet1 = trajetRepo.save(new Trajet(khettaf1, poi1, poi2));
                             Trajet trajet2 = trajetRepo.save(new Trajet(khettaf1, poi3, poi4));
                         }
